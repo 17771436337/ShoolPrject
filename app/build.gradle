@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "prject.shool.src.com.shoolprject"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    //注解
+    compile 'com.jakewharton:butterknife:6.1.0'
+    //Gson
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:design:25.0.1'
+    compile 'com.android.support:support-v4:25.0.1'
+    //网络请求结构框架 okhttp
+    compile 'com.squareup.okhttp:okhttp:2.7.5'
+    compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    /**网络请求async */
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    /**适配器的简单封装*/
+    compile project(':adapter')
+    /**上拉刷新下拉加载*/
+    compile 'com.github.Aspsine:SwipeToLoadLayout:v1.0.0'
+
+    /**recyclerview-*/
+    compile 'com.android.support:recyclerview-v7:25.0.1'
+
+
+    // 仿微信图片加载
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.lqr.imagepicker:library:1.0.0'
+    //        /**安卓选择器类库：http://www.apkbus.com/thread-271577-1-1.html*/
+
+}

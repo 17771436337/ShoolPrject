@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="refresh">
+        <attr name="refresh_mode" format="enum"></attr>
+
+    </declare-styleable>
+
+
+</resources>
